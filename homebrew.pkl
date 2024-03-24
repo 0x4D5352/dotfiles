@@ -1,0 +1,44 @@
+module homebrew
+
+
+
+packages = new Listing {
+    "figlet"
+    "lolcat"
+    "curl"
+    "wget"
+    "git"
+    "gh"
+    "glow"
+    "jq"
+    "sqlite"
+    "vault"
+    "fzf"
+    "zellij"
+    "neovim"
+    "eza"
+    "ripgrep"
+    "zoxide"
+    "bat"
+    "fd"
+    "gping"
+    "htop"
+    "go"
+    "rust"
+    "lua"
+    "python@3.12"
+    "node"
+    "kubectl"
+    "k9s"
+    "terraform"
+    "powerlevel10k"
+}
+
+casks = new Listing {
+    "font-meslo-lg-nerd-font"
+    "amethyst"
+    "powershell"
+    "vagrant"
+    "docker"
+}
+

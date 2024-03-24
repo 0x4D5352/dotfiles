@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+	email = XXXX@XXXX.XXX
+	signingkey = XXXXXXXXXXx
+	name = Firstname Lastname
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = osxkeychain

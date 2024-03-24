@@ -1,0 +1,16 @@
+themes {
+    default {
+        fg 1
+        bg 10
+        black 20
+        red 30
+        green 40
+        yellow 50
+        blue 60
+        magenta 70
+        cyan 80
+        white 90
+        orange 254
+    }
+}
+
