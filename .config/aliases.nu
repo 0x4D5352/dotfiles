@@ -1,6 +1,15 @@
 export alias ll = ls -la
-export alias bupdate = brew update; brew upgrade
+export alias bupdate = (brew update; brew upgrade)
 export alias penv = sh -i -c 'source venv/bin/activate ; nu'
 export alias vim = nvim
 export alias grep = rg
 export alias tree = eza --tree
+export alias blist = brew list
+export alias gt = git
+export alias gcm = git commit -m
+export alias gs = git status
+export alias ga = git add
+export alias gc = git checkout
+export alias gpl = git pull
+export alias gph = git push
+export alias v. = nvim .
