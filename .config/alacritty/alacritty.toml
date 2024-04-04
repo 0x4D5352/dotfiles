@@ -4,5 +4,9 @@ import = ["~/.config/alacritty/themes/themes/aura.toml"]
 program = "~/.cargo/bin/nu"
 
 [window]
-decorations = "Buttonless"
+decorations = "Full"
 opacity = 0.75
+
+[font]
+normal = { family = "MesloLGM Nerd Font Mono", style = "Regular" }
+size = 12
