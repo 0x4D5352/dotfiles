@@ -1,0 +1,27 @@
+alias {
+  ls = "eza"
+  ll = "ls -lah"
+  ld = "ll | grep ^d"
+  bupdate = "brew update && brew upgrade"
+  blist = "brew list"
+  paux = "ps aux"
+  vim = "nvim"
+  grep = "rg"
+  dh = "df -ch"
+  df = "df -h"
+  du = "du -h"
+  duc = "du -c"
+  pkl = "~/Application/pkl"
+  cm2nl = "tr \",\" \"\\n\""
+  cl2nl = "tr \":\" \"\\n\""
+  lpath = "echo $PATH | cl2nl"
+  alldef = "defaults domains | cm2nl"
+}
+
+output {
+  renderer = new PropertiesRenderer {
+    converters {
+      "alias.*" = "alias \(alias.*)"
+    }
+  }
+}
