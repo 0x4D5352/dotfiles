@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local module = {}
 
-local wallpapers = "/Pictures/Backgrounds/Desktops/Personal/"
+local wallpapers = "/Pictures/Desktop Photos"
 
 local wallpapers_dir = os.getenv("HOME") .. wallpapers
 

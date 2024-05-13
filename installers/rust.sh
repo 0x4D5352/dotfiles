@@ -1,7 +1,7 @@
 #!/bin/bash
 # rust stuff
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
-cargo install sccache
+#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
+#cargo install sccache
 RUSTC_WRAPPER='sccache cargo install {package}'
 rustup component add rust-src
 rustup component add rust-analyzer
