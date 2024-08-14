@@ -5,7 +5,6 @@ export alias penv = sh -i -c 'source venv/bin/activate ; nu'
 export alias blist = brew list
 export alias vim = nvim
 export alias grep = rg
-export alias tree = eza --tree
 export alias pinentry = pinentry-mac
 export alias gt = git
 export alias gcm = git commit -m
