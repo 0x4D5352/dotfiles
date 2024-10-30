@@ -18,3 +18,4 @@ export alias glog = git log --oneline --decorate --graph
 export alias glopg = git log --oneline --decorate --graph --parents
 export alias g_c = gpg_cache
 export alias v. = nvim .
+export alias updateall = brew update; brew upgrade; rustup update; cargo install-update -a; pipx upgrade-all
