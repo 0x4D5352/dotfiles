@@ -2,7 +2,7 @@
 
 # Prepwork - get xcode CLI, rosetta, homebrew, and git
 softwareupdate -ia
-softwareupdate --install-rosetta
+#softwareupdate --install-rosetta
 xcode-select --install
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 if [[ $(which git) == *"not found"* ]]; then 
