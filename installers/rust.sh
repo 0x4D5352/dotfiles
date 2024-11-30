@@ -40,7 +40,7 @@ cargo install speedtest-rs
 # cargo install rtx-cli
 # cargo install gitui
 cargo install irust
-cargo install fzf
+# cargo install fzf
 
 
 # rust dev crates

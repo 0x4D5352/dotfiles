@@ -1,0 +1,7 @@
+[window]
+opacity = 0.5
+blur = true
+[terminal]
+[terminal.shell]
+program = "/Users/0x4d5352/.cargo/bin/nu"
+args = ["-l"]

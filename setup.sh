@@ -36,14 +36,14 @@ gh repo clone apl-jwn-vault
 cd ~
 mkdir -p .config
 cd .config
-ln -s ~/workspace/0x4D5352/dotfiles/.config/aerospace ./aerospace
-ln -s ~/workspace/0x4D5352/dotfiles/.config/wezterm ./wezterm
-ln -s ~/workspace/0x4D5352/dotfiles/.config/zellij ./zellij
-ln -s ~/workspace/0x4D5352/dotfiles/.config/nvim ./nvim
-ln -s ~/workspace/0x4D5352/dotfiles/.config/aliases.nu ./aliases.nu
+ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/aerospace ./aerospace
+ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/wezterm ./wezterm
+ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/zellij ./zellij
+ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/nvim ./nvim
+ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/aliases.nu ./aliases.nu
 mkdir -p ~/Library/Application\ Support/nushell
-cp ~/workspace/0x4D5352/dotfiles/env.nu ~/Library/Application\ Support/nushell/env.nu
-cp ~/workspace/0x4D5352/dotfiles/config.nu ~/Library/Application\ Support/nushell/config.nu
+cp ~/workspace/github.com/0x4D5352/dotfiles/env.nu ~/Library/Application\ Support/nushell/env.nu
+cp ~/workspace/github.com/0x4D5352/dotfiles/config.nu ~/Library/Application\ Support/nushell/config.nu
 echo $(which nu) | tee /etc/shells
 chsh -s $(which nu)
 

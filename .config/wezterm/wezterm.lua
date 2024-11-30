@@ -14,5 +14,3 @@ wezterm.time.call_after(120, function()
 end)
 
 wallpaper.apply_to_config(config)
-
-return config
