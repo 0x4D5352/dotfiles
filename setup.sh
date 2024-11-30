@@ -4,7 +4,7 @@
 softwareupdate -ia
 #softwareupdate --install-rosetta
 #xcode-select --install
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 if [[ $(which git) == *"not found"* ]]; then 
     brew install git
 fi
