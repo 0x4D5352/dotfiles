@@ -17,6 +17,7 @@ brew install duti
 brew install --cask 1password-cli
 brew install --cask powershell
 brew install --cask alacritty
+brew install --cask wezterm
 brew install ca-certificates
 brew install openjdk
 brew install git-lfs

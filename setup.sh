@@ -37,6 +37,7 @@ cd ~
 mkdir -p .config
 cd .config
 ln -s ~/workspace/0x4D5352/dotfiles/.config/aerospace ./aerospace
+ln -s ~/workspace/0x4D5352/dotfiles/.config/wezterm ./wezterm
 ln -s ~/workspace/0x4D5352/dotfiles/.config/zellij ./zellij
 ln -s ~/workspace/0x4D5352/dotfiles/.config/nvim ./nvim
 ln -s ~/workspace/0x4D5352/dotfiles/.config/aliases.nu ./aliases.nu
@@ -47,4 +48,4 @@ echo $(which nu) | tee /etc/shells
 chsh -s $(which nu)
 
 
-echo "if you got to this point without any errors you SHOULD be able to launch alacritty and get pulled into nushell!"
+echo "if you got to this point without any errors you SHOULD be able to launch wezterm and get pulled into nushell!"
