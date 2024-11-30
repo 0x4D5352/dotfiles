@@ -4,10 +4,11 @@ because why not
 # Quick Start
 Run This:
 ```shell
-
-
+curl https://raw.githubusercontent.com/0x4D5352/dotfiles/refs/heads/main/setup.sh | sh
 ```
 
+
+everything below this is out of date don't look at it
 
 # my setup
 - environment

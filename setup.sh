@@ -9,6 +9,8 @@ if [[ $(which git) == *"not found"* ]]; then
     brew install git
 fi
 
+sudo echo "get yourself sudo perms here"
+
 cd ~
 mkdir -p workspace/github.com/0x4D5352
 mkdir workspace/obsidian
