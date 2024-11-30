@@ -1,17 +1,23 @@
-#!/bin/sh
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-if [[ $(which git) == *"not found"* ]]; then 
-    brew install git
-fi
-brew install gh
-gh auth login
-gh repo clone mussar0x4D5352/dotfiles
-cd dotfiles
-./essentials.sh
-./rust.sh
-./tools.sh
-./zsh.sh
-./nvim.sh
-./containers.sh
-./desktop.sh
+#!/usr/bin/env bash
 
+# install nerdfonts
+brew tap homebrew/cask-fonts
+brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs -I{} brew install --cask {} || true
+
+
+# install langs
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv python install
+brew install pipx
+brew install go
+brew install lua
+brew install luarocks
+brew install node
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
+cargo install sccache
+RUSTC_WRAPPER='sccache cargo install {package}'
+
+./rust.sh
+./desktop.sh
+./tools.sh
