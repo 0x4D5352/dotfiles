@@ -1,7 +1,13 @@
+[general]
+import = [
+	"~/workspace/github.com/alacritty/alacritty-theme/themes/catppuccin_mocha.toml"
+]
 [window]
-opacity = 0.5
+opacity = 0.9
 blur = true
 option_as_alt = "Both"
+[font]
+size = 14
 [terminal.shell]
-program = "/Users/0x4d5352/.cargo/bin/nu"
+program = "/Users/mussar/.cargo/bin/nu"
 args = ["-l"]
