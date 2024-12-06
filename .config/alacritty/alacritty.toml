@@ -1,6 +1,6 @@
 [general]
 import = [
-	"~/workspace/github.com/alacritty/alacritty-theme/themes/catppuccin_mocha.toml"
+	"~/workspace/github.com/alacritty/alacritty-theme/themes/catppuccin_latte.toml"
 ]
 [window]
 opacity = 0.9
