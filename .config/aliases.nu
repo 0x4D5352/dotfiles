@@ -19,4 +19,4 @@ export alias glopg = git log --oneline --decorate --graph --parents
 export alias g_c = gpg_cache
 export alias v. = nvim .
 export alias tree = eza --tree
-# export alias updateall = brew update; brew upgrade; rustup update; cargo install-update -a; pipx upgrade-all
+export alias aerotog = aerospace enable toggle
