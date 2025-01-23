@@ -25,3 +25,11 @@ def start_zellij [] {
     }
   }
 }
+
+def gitupdateall [] {
+  ls | get name | each {
+    cd $in; ls | get name | each {
+      cd $in; git pull
+    }
+  } | ignore
+}
