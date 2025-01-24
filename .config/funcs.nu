@@ -31,5 +31,5 @@ def gitupdateall [] {
     cd $in; ls | get name | each {
       cd $in; git pull
     }
-  } | ignore
+  }
 }
