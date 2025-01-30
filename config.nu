@@ -1,3 +1,20 @@
+# Set Path
+$env.PATH = [
+  "/opt/homebrew/bin",
+  "/opt/homebrew/sbin",
+  "/opt/homebrew/opt/postgresql@16/bin",
+  ...$env.PATH
+]
+
+$env.PATH ++= [
+  "/usr/local/bin",
+  ($env.HOME | path join ".local" "bin"),
+  ($env.HOME | path join ".cargo" "bin"),
+  ($env.HOME | path join "go" "bin"),
+]
+
+$env.PATH = ($env.PATH | uniq)
+
 # update config
 $env.config.history.file_format = "sqlite"
 $env.config.edit_mode = "vi"
