@@ -18,5 +18,10 @@ export alias glo = git log --oneline
 export alias glog = git log --oneline --decorate --graph
 export alias glopg = git log --oneline --decorate --graph --parents
 export alias g_c = gpg_cache
+<<<<<<< Updated upstream
+=======
+export alias ghas = gh auth status
+export alias v. = nvim .
+>>>>>>> Stashed changes
 export alias tree = eza --tree
 export alias aerotog = aerospace enable toggle

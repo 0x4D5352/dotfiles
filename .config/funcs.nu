@@ -27,9 +27,43 @@ def start_zellij [] {
 }
 
 def gitupdateall [] {
-  ls | get name | each {
-    cd $in; ls | get name | each {
-      cd $in; git pull
+  # TODO: account for cases where the directory errors out cause of stuff like the repo having uncommitted changes
+  ls
+  | get name
+  | each {
+    cd $in;
+    ls 
+    | get name 
+    | each {
+      cd $in;
+      git pull
     }
   }
+}
+
+def gopkgs [] { 
+  which go 
+  | get path.0
+  | ls  $in
+  | where type == "dir"
+  | get name
+  | split column "/" 
+  | get column9 
+}
+
+def godocs [] {
+  which go 
+  | get path.0
+  | ls  $in
+  | where type == "dir"
+  | get name
+  | each { 
+    ls $in
+    | each {
+      get name
+      | split column "/"
+      | select column9 column10
+    }
+  }
+  | flatten
 }
