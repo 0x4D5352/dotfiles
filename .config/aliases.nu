@@ -3,6 +3,7 @@ export alias bupdate = brew update
 export alias bupgrade = brew upgrade
 export alias penv = sh -i -c 'source venv/bin/activate ; nu'
 export alias blist = brew list
+export alias v. = nvim .
 export alias vi = nvim
 export alias vim = nvim
 export alias grep = rg
@@ -18,10 +19,6 @@ export alias glo = git log --oneline
 export alias glog = git log --oneline --decorate --graph
 export alias glopg = git log --oneline --decorate --graph --parents
 export alias g_c = gpg_cache
-<<<<<<< Updated upstream
-=======
 export alias ghas = gh auth status
-export alias v. = nvim .
->>>>>>> Stashed changes
 export alias tree = eza --tree
 export alias aerotog = aerospace enable toggle
