@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO: do a check for if os == darwin, then update symlinks cause iirc linux is ln -s dest source while macos is ln -s source dest
+
 # Prepwork - get xcode CLI, rosetta, homebrew, and git
 #softwareupdate -ia
 #softwareupdate --install-rosetta
@@ -13,7 +15,6 @@ sudo echo "get yourself sudo perms here"
 
 cd ~
 mkdir -p workspace/github.com/0x4D5352
-mkdir workspace/obsidian
 
 brew install gh
 gh auth login
@@ -28,22 +29,22 @@ cd dotfiles/installers
 chmod +x *
 ./install.sh
 
-cd ~/workspace/obsidian
-gh repo clone daybook
+cd ~/workspace/github.com/0x4D5352/
 gh repo clone obsidian-vault
 gh repo clone apl-jwn-vault
 
 cd ~
 mkdir -p .config
 cd .config
+ln -s ~/workspace/github.com/0x4D5352/nvim ./nvim
 ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/aerospace ./aerospace
-ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/wezterm ./wezterm
+ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/ghostyy ./ghostty
 ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/zellij ./zellij
-ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/nvim ./nvim
 ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/aliases.nu ./aliases.nu
+ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/funcs.nu ./funcs.nu
+ln -s ~/workspace/github.com/0x4D5352/dotfiles/.config/config.nu ./config.nu
 mkdir -p ~/Library/Application\ Support/nushell
-cp ~/workspace/github.com/0x4D5352/dotfiles/env.nu ~/Library/Application\ Support/nushell/env.nu
-cp ~/workspace/github.com/0x4D5352/dotfiles/config.nu ~/Library/Application\ Support/nushell/config.nu
+echo "source ~/.config/config.nu" > ~/Library/Application\ Support/nushell/config,nu
 echo $(which nu) | tee /etc/shells
 chsh -s $(which nu)
 
