@@ -1,3 +1,8 @@
+# load stdlib
+use std/dirs
+use std/formats *
+use std/xml *
+
 # Set Path
 $env.PATH = [
   "/opt/homebrew/bin",
@@ -44,7 +49,6 @@ use ~/.cache/starship/init.nu
 # grab custom commands and aliases
 source ~/.config/aliases.nu
 source ~/.config/funcs.nu
-
 
 # source scripts
 # source ~/.config/nu_scripts/custom-completions/op/op-completions.nu

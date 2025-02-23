@@ -1,5 +1,7 @@
 theme = catppuccin-mocha
 
+# custom-shader = ~/workspace/github.com/hackr-sh/ghostty-shaders/inside-the-matrix.glsl
+
 macos-option-as-alt = right
 
 font-family = Lilex Nerd Font Mono
