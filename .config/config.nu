@@ -1,4 +1,4 @@
-# load stdlib
+# load stdlib modules i use
 use std/dirs
 use std/formats *
 use std/xml *
@@ -49,6 +49,9 @@ use ~/.cache/starship/init.nu
 # grab custom commands and aliases
 source ~/.config/aliases.nu
 source ~/.config/funcs.nu
+
+# auto-start zellij if not already in a zellij session
+start_zellij
 
 # source scripts
 # source ~/.config/nu_scripts/custom-completions/op/op-completions.nu
