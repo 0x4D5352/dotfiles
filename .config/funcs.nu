@@ -27,12 +27,18 @@ def start_zellij [] {
 }
 
 def gitupdateall [] {
-  # TODO: account for cases where the directory errors out cause of stuff like the repo having uncommitted changes
   ls
   | get name
   | each {
     cd $in;
-    git pull
+  # TODO: account for cases where the directory errors out cause of stuff like the repo having uncommitted changes
+    if (git status) =~ "nothing to commit, working tree clean" {
+      git pull
+    } else {
+      git stash;
+      git pull;
+      git stash pop
+    }
   }
 }
 
