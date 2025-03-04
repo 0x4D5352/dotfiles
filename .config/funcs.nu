@@ -32,12 +32,7 @@ def gitupdateall [] {
   | get name
   | each {
     cd $in;
-    ls 
-    | get name 
-    | each {
-      cd $in;
-      git pull
-    }
+    git pull
   }
 }
 
