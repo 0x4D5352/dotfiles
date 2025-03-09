@@ -196,9 +196,25 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+# default locations
+[[on-window-detected]]
+if.during-aerospace-startup = true
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
+if.during-aerospace-startup = true
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+if.during-aerospace-startup = true
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace 3'
+
 # ghostty tabs workaround
 [[on-window-detected]]
-if.app-id="com.mitchellh.ghostty"
-run= [
-  "layout tiling",
+if.app-id = 'com.mitchellh.ghostty'
+run = [
+  'layout tiling', 
 ]
