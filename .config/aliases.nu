@@ -25,3 +25,4 @@ export alias g_c = gpg_cache
 export alias ghas = gh auth status
 export alias tree = eza --tree
 export alias aerotog = aerospace enable toggle
+export alias pico8 = `/Applications/PICO-8.app/Contents/MacOS/pico8`
