@@ -218,3 +218,7 @@ if.app-id = 'com.mitchellh.ghostty'
 run = [
   'layout tiling', 
 ]
+
+[[on-window-detected]]
+if.app-id = 'com.1password.1password'
+run = 'layout tiling',
