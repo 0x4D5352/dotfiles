@@ -30,6 +30,7 @@ def gitupdateall [] {
   ls
   | get name
   | each {
+    echo $in;
     cd $in;
   # TODO: account for cases where the directory errors out cause of stuff like the repo having uncommitted changes
     if (git status) =~ "nothing to commit, working tree clean" {
