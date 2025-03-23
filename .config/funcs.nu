@@ -1,4 +1,4 @@
-def update_all [] {
+def update-all [] {
     brew update
     brew upgrade
     rustup update
@@ -12,7 +12,7 @@ def ghswap [] {
     gh auth setup-git
 }
 
-def start_zellij [] {
+def start-zellij [] {
   if 'ZELLIJ' not-in ($env | columns) {
     if 'ZELLIJ_AUTO_ATTACH' in ($env | columns) and $env.ZELLIJ_AUTO_ATTACH == 'true' {
       zellij attach -c
@@ -26,10 +26,10 @@ def start_zellij [] {
   }
 }
 
-def gitupdateall [] {
+def git-update-all [] {
   ls
   | get name
-  | each {
+  | par-each {
     cd $in;
   # TODO: account for cases where the directory errors out cause of stuff like the repo having uncommitted changes
     if (git status) =~ "nothing to commit, working tree clean" {
@@ -42,29 +42,9 @@ def gitupdateall [] {
   }
 }
 
-def gopkgs [] { 
-  which go 
-  | get path.0
-  | ls  $in
-  | where type == "dir"
-  | get name
-  | split column "/" 
-  | get column9 
-}
-
-def godocs [] {
-  which go 
-  | get path.0
-  | ls  $in
-  | where type == "dir"
-  | get name
-  | each { 
-    ls $in
-    | each {
-      get name
-      | split column "/"
-      | select column9 column10
-    }
-  }
-  | flatten
+def git-merge-to-main [branch: string] {
+  git switch main
+  git merge $branch
+  git push
+  git switch $branch
 }
