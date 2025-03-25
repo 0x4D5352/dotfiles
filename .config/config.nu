@@ -51,7 +51,7 @@ source ~/.config/aliases.nu
 source ~/.config/funcs.nu
 
 # auto-start zellij if not already in a zellij session
-# start_zellij # disabled cause of some bug that messes up nushell persistence
+start-zellij
 
 # source scripts
 # source ~/.config/nu_scripts/custom-completions/op/op-completions.nu
