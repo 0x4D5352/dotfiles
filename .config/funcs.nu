@@ -15,7 +15,7 @@ def ghswap [] {
 def start-zellij [] {
   if 'ZELLIJ' not-in ($env | columns) {
     if 'ZELLIJ_AUTO_ATTACH' in ($env | columns) and $env.ZELLIJ_AUTO_ATTACH == 'true' {
-      zellij attach -c
+      zellij attach
     } else {
       zellij
     }
