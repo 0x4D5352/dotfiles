@@ -1,6 +1,6 @@
 theme = catppuccin-mocha
 
-custom-shader = ./shaders/inside-the-matrix.glsl
+#custom-shader = ./shaders/hackr-sh/crt.glsl
 
 macos-option-as-alt = right
 
