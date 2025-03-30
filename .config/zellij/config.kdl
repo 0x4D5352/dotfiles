@@ -225,12 +225,26 @@ plugins {
     configuration location="zellij:configuration"
     plugin-manager location="zellij:plugin-manager"
     about location="zellij:about"
+    autolock location="file:~/.config/zellij/plugins/zellij-autolock.wasm" {
+        // Enabled at start?
+        is_enabled true
+        // Lock when any open these programs open.
+        triggers "nvim|vim|v|nv"
+        watch_triggers "fzf|zoxide|atuin|atac"  // Lock when any of these open and monitor until closed.
+        watch_interval "1.0"  // When monitoring, check every X seconds.
+        // Reaction to input occurs after this many seconds. (default=0.3)
+        // (An existing scheduled reaction prevents additional reactions.)
+        reaction_seconds "0.3"
+        // Print to Zellij log? (default=false)
+        // print_to_log true
+    }
 }
 
 // Plugins to load in the background when a new session starts
 load_plugins {
   // "file:/path/to/my-plugin.wasm"
   // "https://example.com/my-plugin.wasm"
+    autolock
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
