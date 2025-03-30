@@ -42,8 +42,6 @@ $env.PKG_CONFIG_PATH = '/opt/homebrew/opt/postgresql@16/lib/pkgconfig'
 # setup starship
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship.init.nu
-
-# enable starship
 use ~/.cache/starship/init.nu
 
 # grab custom commands and aliases
@@ -53,7 +51,14 @@ source ~/.config/funcs.nu
 # auto-start zellij if not already in a zellij session
 start-zellij
 
+# zoxide setup
+zoxide init nushell | save -f ~/.zoxide.nu
+source ~/.zoxide.nu
+
+
 # source scripts
+
+
 # source ~/.config/nu_scripts/custom-completions/op/op-completions.nu
 # source ~/.config/nu_scripts/custom-completions/gh/gh-completions.nu
 # source ~/.config/nu_scripts/custom-completions/git/git-completions.nu
