@@ -40,6 +40,8 @@ $env.CPPFLAGS = '-L/opt/homebrew/opt/postgresql@16/include'
 $env.PKG_CONFIG_PATH = '/opt/homebrew/opt/postgresql@16/lib/pkgconfig'
 
 # setup starship
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship.init.nu
 use ~/.cache/starship/init.nu
 
 # grab custom commands and aliases
