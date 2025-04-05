@@ -196,21 +196,20 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+[workspace-to-monitor-foce-assignment]
+8 = 'main'
+9 = ['secondary', 3]
+
 # default locations
 [[on-window-detected]]
-if.during-aerospace-startup = true
 if.app-id = 'com.mitchellh.ghostty'
+if.workspace != 8
 run = 'move-node-to-workspace 8'
 
 [[on-window-detected]]
-if.during-aerospace-startup = true
 if.app-id = 'md.obsidian'
+if.workspace != 9
 run = 'move-node-to-workspace 9'
-
-[[on-window-detected]]
-if.during-aerospace-startup = true
-if.app-id = 'com.apple.Safari'
-run = 'move-node-to-workspace 3'
 
 # ghostty tabs workaround
 [[on-window-detected]]
