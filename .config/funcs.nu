@@ -35,9 +35,7 @@ def git-update-all [] {
     if (git status) =~ "nothing to commit, working tree clean" {
       git pull
     } else {
-      git stash;
-      git pull;
-      git stash pop
+      git rebase origin/main
     }
   }
 }
