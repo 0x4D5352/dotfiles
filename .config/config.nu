@@ -20,6 +20,8 @@ $env.PATH ++= [
 
 $env.PATH = ($env.PATH | uniq)
 
+#$env.XDG_CONFIG_HOME = ($env.HOME | path join '.config')
+
 # update config
 $env.config.history.file_format = "sqlite"
 $env.config.edit_mode = "vi"
@@ -38,6 +40,10 @@ $env.RUSTC_WRAPPER = $env.HOME + '/.cargo/bin/sccache'
 $env.LDFLAGS = '-L/opt/homebrew/opt/postgresql@16/lib'
 $env.CPPFLAGS = '-L/opt/homebrew/opt/postgresql@16/include'
 $env.PKG_CONFIG_PATH = '/opt/homebrew/opt/postgresql@16/lib/pkgconfig'
+
+# set topiary configs 
+#$env.TOPIARY_CONFIG_FILE = ($env.XDG_CONFIG_HOME | path join topiary languages.ncl)
+#$env.TOPIARY_LANGUAGE_DIR = ($env.XDG_CONFIG_HOME | path join topiary languages)
 
 # setup starship
 mkdir ~/.cache/starship
