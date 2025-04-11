@@ -42,8 +42,8 @@ $env.CPPFLAGS = '-L/opt/homebrew/opt/postgresql@16/include'
 $env.PKG_CONFIG_PATH = '/opt/homebrew/opt/postgresql@16/lib/pkgconfig'
 
 # set topiary configs 
-#$env.TOPIARY_CONFIG_FILE = ($env.XDG_CONFIG_HOME | path join topiary languages.ncl)
-#$env.TOPIARY_LANGUAGE_DIR = ($env.XDG_CONFIG_HOME | path join topiary languages)
+$env.TOPIARY_CONFIG_FILE = ($env.HOME | path join '.config' topiary languages.ncl)
+$env.TOPIARY_LANGUAGE_DIR = ($env.HOME | path join '.config' topiary languages)
 
 # setup starship
 mkdir ~/.cache/starship
