@@ -29,4 +29,5 @@ export alias aerotog = aerospace enable toggle
 export alias pico8 = `/Applications/PICO-8.app/Contents/MacOS/pico8`
 export alias zrf = zellij run --floating --
 export alias zrf = zellij edit --floating --
+export alias cat = bat
 #export alias aerolist = (aerospace list-apps | lines | split column "|")
