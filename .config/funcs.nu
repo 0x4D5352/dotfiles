@@ -1,15 +1,16 @@
 def update-all [] {
-    brew update
-    brew upgrade
-    rustup update
-    cargo install-update -a
-    pipx upgrade-all
-    softwareupdate -ia
+  brew update
+  brew upgrade
+  rustup update
+  cargo install-update -a
+  pipx upgrade-all
+  softwareupdate -ia
+  gup update
 }
 
 def ghswap [] {
-    gh auth switch
-    gh auth setup-git
+  gh auth switch
+  gh auth setup-git
 }
 
 def start-zellij [] {
@@ -31,7 +32,7 @@ def git-update-all [] {
   | get name
   | par-each {
     cd $in;
-  # TODO: account for cases where the directory errors out cause of stuff like the repo having uncommitted changes
+    # TODO: account for cases where the directory errors out cause of stuff like the repo having uncommitted changes
     if (git status) =~ "nothing to commit, working tree clean" {
       git pull
     } else {
