@@ -5,17 +5,17 @@ use std/xml *
 
 # Set Path
 $env.PATH = [
-  "/opt/homebrew/bin",
-  "/opt/homebrew/sbin",
-  "/opt/homebrew/opt/postgresql@16/bin",
+  "/opt/homebrew/bin"
+  "/opt/homebrew/sbin"
+  "/opt/homebrew/opt/postgresql@16/bin"
   ...$env.PATH
 ]
 
 $env.PATH ++= [
-  "/usr/local/bin",
-  ($env.HOME | path join ".local" "bin"),
-  ($env.HOME | path join ".cargo" "bin"),
-  ($env.HOME | path join "go" "bin"),
+  "/usr/local/bin"
+  ($env.HOME | path join ".local" "bin")
+  ($env.HOME | path join ".cargo" "bin")
+  ($env.HOME | path join "go" "bin")
 ]
 
 $env.PATH = ($env.PATH | uniq)
@@ -41,9 +41,10 @@ $env.LDFLAGS = '-L/opt/homebrew/opt/postgresql@16/lib'
 $env.CPPFLAGS = '-L/opt/homebrew/opt/postgresql@16/include'
 $env.PKG_CONFIG_PATH = '/opt/homebrew/opt/postgresql@16/lib/pkgconfig'
 
-# set topiary configs 
+# setup topiary
 $env.TOPIARY_CONFIG_FILE = ($env.HOME | path join '.config' topiary languages.ncl)
 $env.TOPIARY_LANGUAGE_DIR = ($env.HOME | path join '.config' topiary languages)
+source ~/.config/topiary/format.nu
 
 # setup starship
 mkdir ~/.cache/starship
@@ -60,9 +61,7 @@ start-zellij
 # zoxide setup
 source ~/.zoxide.nu
 
-
 # source scripts
-
 
 # source ~/.config/nu_scripts/custom-completions/op/op-completions.nu
 # source ~/.config/nu_scripts/custom-completions/gh/gh-completions.nu
