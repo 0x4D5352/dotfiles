@@ -44,7 +44,6 @@ $env.PKG_CONFIG_PATH = '/opt/homebrew/opt/postgresql@16/lib/pkgconfig'
 # setup topiary
 $env.TOPIARY_CONFIG_FILE = ($env.HOME | path join '.config' topiary languages.ncl)
 $env.TOPIARY_LANGUAGE_DIR = ($env.HOME | path join '.config' topiary languages)
-source ~/.config/topiary/format.nu
 
 # setup starship
 mkdir ~/.cache/starship
