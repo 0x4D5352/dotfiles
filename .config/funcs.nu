@@ -36,7 +36,7 @@ def git-update-all [] {
     if (git status) =~ "nothing to commit, working tree clean" {
       git pull
     } else {
-      git rebase origin/main
+      print $"can't pull ($in)"
     }
   }
 }
