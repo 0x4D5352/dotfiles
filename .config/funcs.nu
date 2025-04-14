@@ -30,7 +30,7 @@ def start-zellij [] {
 def git-update-all [] {
   ls
   | get name
-  | par-each {
+  | each {
     cd $in
     print $"working on (pwd)"
     # TODO: account for cases where the directory errors out cause of stuff like the repo having uncommitted changes
