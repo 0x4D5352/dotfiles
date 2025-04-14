@@ -32,7 +32,7 @@ def git-update-all [] {
   | get name
   | par-each {
     cd $in
-    print (pwd)
+    print $"working on (pwd)"
     # TODO: account for cases where the directory errors out cause of stuff like the repo having uncommitted changes
     if (git status) =~ "nothing to commit, working tree clean" {
       git pull
