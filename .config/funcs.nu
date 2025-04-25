@@ -49,3 +49,6 @@ def git-merge-to-main [branch: string] {
   git push
   git switch $branch
 }
+
+export alias iptab-builtin = ^iptab
+def iptab [] { iptab-builtin | detect columns -s 1 | select addrs bits pref class mask | reject 0 34 }
