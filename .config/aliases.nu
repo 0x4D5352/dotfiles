@@ -40,3 +40,6 @@ export alias pom = porsmo
 export alias grep = rg
 export alias lolcow = lolcrab
 export alias fg = job unfreeze
+export alias js = job spawn
+export alias jk = job kill
+export alias ju = job unfreeze
