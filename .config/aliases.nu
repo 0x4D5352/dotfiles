@@ -7,6 +7,7 @@ export alias cls = clear
 export alias da = dirs add
 export alias dd = dirs drop
 export alias dg = dirs goto
+export alias dl = dirs
 export alias dn = dirs next
 export alias dp = dirs prev
 export alias dud = dust
