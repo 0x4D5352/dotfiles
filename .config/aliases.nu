@@ -3,6 +3,7 @@ export alias blist = brew list
 export alias bupdate = brew update
 export alias bupgrade = brew upgrade
 export alias cat = bat
+export alias cls = clear
 export alias da = dirs add
 export alias dd = dirs drop
 export alias dg = dirs goto
